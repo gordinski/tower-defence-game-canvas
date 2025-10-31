@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Tower defense на Canvas: став башти, зупиняй ворогів, збирай монети." />
+  <meta name="theme-color" content="#111827" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Changa+One:ital@0;1&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Preload key images -->
+  <link rel="preload" as="image" href="img/gameMap.png" fetchpriority="high" />
+  <link rel="prefetch" as="image" href="img/explosion.png" />
+  <link rel="prefetch" as="image" href="img/orc.png" />
+  <link rel="prefetch" as="image" href="img/projectile.png" />
+  <link rel="prefetch" as="image" href="img/tower.png" />
+
+  <title>Tower Defense</title>
+  <link rel="icon" href="favicon.ico" />
+</head>
+
+<body>
+  <main class="wrapper" aria-label="Ігрове поле Tower Defense">
+    <!-- Фіксовані атрибути для уникнення стрибків макета; у JS вони збігаються -->
+    <canvas width="1280" height="768" aria-label="Ігрове полотно"></canvas>
+
+    <!-- Overlays -->
+    <div class="text-game-over-fill" aria-hidden="true"></div>
+    <div class="text-game-over" role="alert" aria-live="assertive">GAME OVER</div>
+    <button class="btn-restart">Restart</button>
+
+    <!-- HUD -->
+    <div class="wrapper-info" role="status" aria-live="polite">
+      <div class="hearts" aria-label="Життя">❤️10</div>
+      <div class="coins" aria-label="Монети">🪙0</div>
+    </div>
+
+    <noscript>
+      <p style="padding:1rem; background:#fee; color:#900; border:1px solid #f99;">
+        Для гри потрібен увімкнений JavaScript.
+      </p>
+    </noscript>
+  </main>
+
+  <!-- Scripts (defer зберігає порядок і не блокує рендер) -->
+  <script src="js/classes/Sprite.js" defer></script>
+  <script src="js/waypoints.js" defer></script>
+  <script src="js/placementTilesData.js" defer></script>
+  <script src="js/classes/PlacementTiles.js" defer></script>
+  <script src="js/classes/Enemy.js" defer></script>
+  <script src="js/classes/Building.js" defer></script>
+  <script src="js/classes/Projectile.js" defer></script>
+  <script src="js/index.js" defer></script>
+</body>
+
+</html>

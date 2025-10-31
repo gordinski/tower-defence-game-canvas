@@ -1,0 +1,95 @@
+/* === БАЗА === */
+body {
+  margin: 0;
+  background: #000;
+  font-family: "Changa One", sans-serif;
+  overflow: hidden;
+  color: #fff;
+}
+
+/* === ОБГОРТКА === */
+.wrapper {
+  position: relative;
+  display: inline-block;
+  user-select: none;
+  padding: 16px;
+}
+
+/* === ПОЛОТНО ГРИ === */
+canvas {
+  display: block;
+  border-radius: 8px;
+}
+
+/* === ЕКРАН "GAME OVER" === */
+.text-game-over,
+.text-game-over-fill {
+  position: absolute;
+  inset: 0;
+  display: none;
+}
+
+.text-game-over-fill {
+  display: none;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.text-game-over {
+  font-size: clamp(48px, 8vw, 96px);
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  text-shadow: 0 0 12px rgba(255, 255, 255, 0.4);
+  display: none;
+  z-index: 2;
+  padding-bottom: 70px;
+}
+
+/* === ІНФО-ПАНЕЛЬ (життя / монети) === */
+.wrapper-info {
+  position: absolute;
+  top: 32px;
+  right: 32px;
+  display: flex;
+  gap: 16px;
+  padding: 16px 16px;
+  border-radius: 12px;
+  font-size: 32px;
+  background: rgba(0, 0, 0, 0.6);
+  -webkit-text-stroke: 2px #000;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+  z-index: 3;
+}
+
+.hearts,
+.coins {
+  display: flex;
+  flex-direction: column;
+  min-width: 80px;
+  text-align: center;
+  -webkit-text-stroke: 2px #000;
+}
+
+.btn-restart {
+  display: none;
+  position: absolute;
+  top: 58%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: inherit;
+  font-size: 28px;
+  color: #fff;
+  background: #1f2937;
+  border: 2px solid #fff;
+  border-radius: 12px;
+  padding: 12px 32px;
+  cursor: pointer;
+  transition: 0.2s ease;
+  z-index: 3;
+}
+
+.btn-restart:hover {
+  background: #374151;
+  transform: translate(-50%, -50%) scale(1.05);
+}
