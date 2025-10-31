@@ -1,0 +1,39 @@
+{
+    "Map/SizeTest": {
+        "height": 4300,
+        "width": 2
+    },
+    "activeFile": "",
+    "expandedProjectPaths": [
+        "."
+    ],
+    "fileStates": {
+        "tileset.tsx": {
+            "scaleInDock": 1
+        },
+        "без назви.js": {
+            "scale": 1,
+            "selectedLayer": 5,
+            "viewCenter": {
+                "x": 557.5,
+                "y": 404.5
+            }
+        }
+    },
+    "map.height": 12,
+    "map.lastUsedFormat": "js",
+    "map.tileHeight": 64,
+    "map.tileWidth": 64,
+    "map.width": 20,
+    "openFiles": [
+    ],
+    "project": "без назви.tiled-project",
+    "recentFiles": [
+        "без назви.js"
+    ],
+    "tileset.lastUsedFormat": "tsx",
+    "tileset.tileSize": {
+        "height": 64,
+        "width": 64
+    }
+}
